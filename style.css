@@ -1,0 +1,123 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the container */
+  align-items: center; /* Vertically center the container */
+  margin: 9.6rem;
+}
+
+.big-vertical-container {
+  flex: 3;
+}
+
+.small-vertical-container {
+  flex: 1;
+  align-self: stretch;
+}
+
+.blog-container {
+  display: flex;
+  padding: 1rem;
+}
+
+.author {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.author-title {
+  opacity: 50%;
+}
+
+.blog-post {
+  color: hsl(0, 0%, 81%);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.profile-img {
+  width: 3rem; /* Set a fixed width */
+  height: 3rem; /* Set a fixed height */
+  overflow: hidden; /* Ensure the image stays within the container */
+  border-radius: 50%; /* Make the container round */
+}
+
+.blog-header {
+  margin-bottom: 1.2rem;
+}
+
+.blog-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  opacity: 70%;
+}
+
+.daniel {
+  background-color: hsl(263, 55%, 52%);
+}
+
+.jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.jeanette,
+.kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.patrick {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.blog-container:last-child {
+  height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    margin: 2.4rem;
+  }
+
+  .blog-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .blog-post {
+    margin: 1rem 1rem 1rem 1rem;
+  }
+}
